@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head></h:head>
+<body>
+	<ui:composition template="/WEB-INF/templates/adminTemplate.xhtml">
+		<ui:define name="content">
+			<div class="content">
+				<div class="user-main"></div>
+				<div class="user-right">
+					<div class="user-details-form">
+						<h:form>
+							<h1>Your details:</h1>
+							<p:outputLabel value="Name: " />
+							<p:outputLabel value="#{loginController.user.name}" />
+							<br />
+							<p:outputLabel value="Lastname: " />
+							<p:outputLabel value="#{loginController.user.lastname}" />
+							<br />
+							<p:outputLabel value="Username: " />
+							<p:outputLabel value="#{loginController.user.username}" />
+							<br />
+							<p:outputLabel value="E-mail: " />
+							<p:outputLabel value="#{loginController.user.email}" />
+							<br />
+							<p:outputLabel value="Role: " />
+							<p:outputLabel value="#{loginController.user.role}" />
+						</h:form>
+					</div>
+				</div>
+			</div>
+		</ui:define>
+	</ui:composition>
+
+</body>
+</html>

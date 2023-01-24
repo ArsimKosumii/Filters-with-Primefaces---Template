@@ -1,0 +1,156 @@
+@charset "ISO-8859-1";
+
+body {
+	width: 100%;
+	min-height: 100wh;
+	margin: auto;
+}
+
+.login-content {
+	background-image: url('../resources/images/loginBackground3.png');
+	background-position: center; background-repeat : no-repeat;
+	background-size : cover; display : flex;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+}
+
+.login-form {
+	width: 300px;
+	height: 400px;
+}
+
+.login-form label {
+	display: block;
+	color:black;
+	font-weight: bold;
+	padding: 5px;
+}
+
+.login-form input {
+	display: block;
+	width: 100%;
+}
+
+.login-form button {
+	margin-top: 20px;
+	width: 100%;
+}
+
+#page {
+	width: 100%;
+}
+
+.header-logo {
+	width: 200px;
+	position: absolute;
+	top: 32px;
+	left: 25px;
+	z-index: 10;
+}
+
+#userNavBar {
+	width: 100%;
+	background: #F8F9FA;
+	padding: 10px;
+	border: 1px solid grey;
+	border-radius: 5px;
+	border-color: #DEE2E6;
+}
+
+#userNavBar ul {
+	margin-left: 220px;
+}
+
+#userNavBar a {
+	margin-left: 20px;
+}
+
+#userNavBar a:last-child {
+	float: right;
+}
+
+#userNavBar button {
+	padding: 5px;
+	float: right;
+}
+
+#userFooter {
+	text-align: center;
+	float: left;
+	width: 100%;
+}
+
+#content {
+	margin: 20px 0px 20px 0px;
+	min-height: 1000px;
+}
+
+.user-main {
+	width: 75%;
+	float: left;
+}
+
+.upload-form {
+	display: flex;
+	justify-content: center;
+}
+
+.upload-form h3 {
+	display: block;
+}
+
+.upload-button {
+	display: block;
+	width: 100%;
+	margin-top: 10px;
+	height: 30px;
+	border-radius: 5px;
+	cursor: pointer;
+	border: none;
+	background: #2196F3;
+	color: white;
+	font-size: 15px;
+}
+
+.upload-button:hover {
+	background: #0039e6;
+}
+
+.user-right {
+	width: 25%;
+	float: right;
+	display: flex;
+	justify-content: center;
+}
+
+.user-details-form {
+	flaot: right;
+	width: 95%;
+	padding: 6px;
+}
+
+.dialog-modal label {
+	display: block;
+}
+
+.dialog-modal input {
+	display: block;
+	width: 250px;
+}
+
+.dialog-modal select {
+	display: block;
+	width: 250px;
+}
+
+.user-content {
+	min-height: 1000px;
+}
+
+.user-images img {
+	width: 200px;
+}

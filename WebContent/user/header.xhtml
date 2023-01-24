@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<h:outputStylesheet name="styles.css" library="css" />
+</h:head>
+<body>
+	<div id="userNavBar">
+		<h:form>
+			<p:graphicImage styleClass="header-logo" name="primefaces-logo.png" library="images" />
+			<p:menubar>
+				<p:menuitem value="Home" url="index.xhtml" icon="pi pi-home" />
+				<p:menuitem value="Products" url="pagination.xhtml" icon="pi pi-shopping-cart" />
+				<p:menuitem value="Upload" url="upload.xhtml" icon="pi pi-upload" />
+				<f:facet name="options">
+					<p:commandButton value="Logout"
+						action="#{loginController.logout()}" icon="pi pi-sign-out" />
+				</f:facet>
+			</p:menubar>
+		</h:form>
+	</div>
+</body>
+</html>

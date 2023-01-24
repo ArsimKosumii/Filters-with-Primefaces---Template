@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head></h:head>
+<body>
+	<ui:composition template="/WEB-INF/templates/userTemplate.xhtml">
+		<ui:define name="content">
+			<div class="content">
+				<div class="user-main">
+					<h:form enctype="multipart/form-data">
+						<h:inputFile value="#{uploadController.part}" />
+						<p:commandButton value="Upload" ajax="false"
+							action="#{uploadController.processUpload()}" />
+						<p:dataTable value="#{uploadController.allImages}" var="image">
+							<p:column>
+								<f:facet name="header">Image</f:facet>
+								<p:graphicImage style="width:200px;"
+									value="/ImageServlet/#{image.name}" />
+							</p:column>
+							<p:column>
+								<f:facet name="header">Link</f:facet>
+								<h:outputLink value="../ImageServlet/?#{image.name}">Download</h:outputLink>
+							</p:column>
+						</p:dataTable>
+					</h:form>
+				</div>
+				<div class="user-right">
+					<div class="user-details-form">
+						<h:form>
+							<h1>Your details:</h1>
+							<p:outputLabel value="Name: " />
+							<p:outputLabel value="#{loginController.user.name}" />
+							<br />
+							<p:outputLabel value="Lastname: " />
+							<p:outputLabel value="#{loginController.user.lastname}" />
+							<br />
+							<p:outputLabel value="Username: " />
+							<p:outputLabel value="#{loginController.user.username}" />
+							<br />
+							<p:outputLabel value="E-mail: " />
+							<p:outputLabel value="#{loginController.user.email}" />
+							<br />
+							<p:outputLabel value="Role: " />
+							<p:outputLabel value="#{loginController.user.role}" />
+						</h:form>
+					</div>
+				</div>
+			</div>
+		</ui:define>
+	</ui:composition>
+</body>
+</html>
